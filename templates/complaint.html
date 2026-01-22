@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h2>File a Complaint</h2>
+<form method="post" action="/submit-complaint">
+<input name="complaint_title" placeholder="Complaint Title" required>
+<textarea name="complaint_description" placeholder="Describe your complaint in detail" rows="6" required></textarea>
+<input name="complaint_category" placeholder="Category (e.g., Service, Infrastructure, etc.)" required>
+<input name="complaint_location" placeholder="Location/Address of complaint" required>
+<button type="submit">Submit Complaint</button>
+</form>
+
+<div class="footer-note">
+<a href="/dashboard">Back to Dashboard</a>
+</div>
+</div>
+{% endblock %}

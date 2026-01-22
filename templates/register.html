@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+<h2>Create Profile</h2>
+<form method="post" action="/register">
+<input name="name" placeholder="Full Name" required>
+<input type="date" name="dob" placeholder="Date of Birth" required>
+<input name="phone" placeholder="Phone" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Register</button>
+</form>
+<p><strong>Password Requirements:</strong></p>
+<ul style="font-size:12px;text-align:left;">
+  <li>At least 8 characters</li>
+  <li>Contains uppercase letter (A-Z)</li>
+  <li>Contains lowercase letter (a-z)</li>
+  <li>Contains a digit (0-9)</li>
+  <li>Contains special character (@$!%*?&)</li>
+</ul>
+</div>
+{% endblock %}
